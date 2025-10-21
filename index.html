@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ankkrypt Brave Game | Click & Tip to Continue</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Floating Menu Button -->
+<div id="menu-circle">
+  ☰
+</div>
+
+<!-- Slide-out Menu -->
+<nav id="slide-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="send-crypto.html">Send Crypto Tip</a></li>
+    <li><a href="how-to-play.html">How to Play</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+<header>
+  <h1>🔥 Ankkrypt Fire Cracker 🔥</h1>
+  <p>Crack the moving 🔥 as many times as you can in 30 seconds!</p>
+</header>
+
+<main>
+  <div id="game-container" aria-label="Game container">
+    <div id="target" tabindex="0" role="button" aria-pressed="false" aria-label="Click the fire target"></div>
+  </div>
+  <div id="scoreboard" aria-live="polite">Score: 0</div>
+  <div id="timer" aria-live="polite">Time left: 30s</div>
+
+  <table aria-label="Previous Scores" id="scores-table" style="display:none;">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Score</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Scores go here -->
+    </tbody>
+  </table>
+</main>
+
+<section id="tip-section" aria-label="Send Crypto Tip Section">
+  <h2>Want to keep playing?</h2>
+  <p>Send a crypto tip to unlock another 30 seconds of gameplay!</p>
+  <p style="font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem;">
+    <code>ankkrypt.brave</code>
+  </p>
+  <a href="send-crypto.html" target="_blank" rel="noopener noreferrer" aria-label="Send crypto tip">Send Crypto Tip</a>
+  <button id="restart-btn" aria-label="Restart game without tip">Restart Game (Free)</button>
+</section>
+
+<footer>
+  <div class="social-links">
+    <a href="https://x.com/ankkrypt" target="_blank" aria-label="X (Twitter)">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" width="24">
+    </a>
+    <a href="https://www.reddit.com/user/the_unleashed_beast/" target="_blank" aria-label="Reddit">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit" width="24">
+    </a>
+    <a href="https://github.com/ankkrypt" target="_blank" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24">
+    </a>
+    <a href="https://community.brave.com/u/ankkrypt/preferences/account" target="_blank" aria-label="Brave Community">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg" alt="Brave" width="24">
+    </a>
+  </div>
+  <p>&copy; 2025 Ankkrypt.Brave | Built for Brave Website Contest</p>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

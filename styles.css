@@ -1,0 +1,269 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #a0c1ff;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+#game-container {
+position: relative;
+width: 320px;
+height: 320px;
+border: 4px solid #61dafb;
+border-radius: 16px;
+background: #0f1927;
+overflow: hidden;
+margin: 1.5rem 0;
+}
+
+#target {
+position: absolute;
+width: 60px;
+height: 60px;
+background: url('https://twemoji.maxcdn.com/v/latest/72x72/1f525.png') no-repeat center/contain;
+cursor: pointer;
+user-select: none;
+transition: transform 0.15s ease, left 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+filter: drop-shadow(0 0 6px #f97316cc) drop-shadow(0 0 10px #f97316cc);
+}
+
+#target:active {
+transform: scale(0.85);
+}
+
+#scoreboard {
+font-size: 1.2rem;
+margin-top: 0.8rem;
+}
+
+#timer {
+font-weight: 700;
+font-size: 1.4rem;
+margin-top: 0.5rem;
+color: #f97316;
+}
+
+#tip-section {
+background: #192a42;
+padding: 1rem 1.5rem;
+border-radius: 12px;
+width: 90%;
+max-width: 600px;
+box-shadow: 0 0 15px rgba(97, 218, 251, 0.5);
+text-align: center;
+display: none;
+}
+
+#tip-section h2 {
+margin: 0 0 1rem 0;
+color: #61dafb;
+}
+
+#tip-section p {
+font-size: 1rem;
+margin-bottom: 1rem;
+color: #cbd5e1;
+}
+
+#tip-section a {
+display: inline-block;
+padding: 0.75rem 1.5rem;
+background: #61dafb;
+color: #0f1927;
+text-decoration: none;
+border-radius: 8px;
+font-weight: 700;
+transition: background 0.3s ease;
+}
+
+#tip-section a:hover {
+background: #21a1f1;
+}
+
+#restart-btn {
+margin-top: 1rem;
+padding: 0.6rem 1.3rem;
+background: #0f1927;
+border: 2px solid #61dafb;
+color: #61dafb;
+font-weight: 700;
+border-radius: 8px;
+cursor: pointer;
+transition: background 0.3s ease, color 0.3s ease;
+}
+
+#restart-btn:hover {
+background: #61dafb;
+color: #0f1927;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #789;
+}
+
+.social-links {
+    margin-top: 0.5rem;
+}
+
+.social-links a img {
+    margin: 0 8px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1) invert(0);
+}
+
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: #f0f0f0;
+    background: #0f1927;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.6rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #1b2a47;
+}
+
+tr:nth-child(even) {
+    background-color: #142238;
+}
+
+button.delete-btn {
+    background: #f44336;
+    border: none;
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+button.delete-btn:hover {
+    background: #d32f2f;
+}
+
+@media (max-width: 400px) {
+    #game-container {
+    width: 90vw;
+    height: 90vw;
+    }
+
+    #target {
+    width: 15vw;
+    height: 15vw;
+    }
+}
+
+/* Floating Circle */
+#menu-circle {
+position: fixed;
+top: 20px;
+left: 20px;
+width: 50px;
+height: 50px;
+background: #f97316;
+color: #fff;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+cursor: pointer;
+z-index: 1000;
+box-shadow: 0 0 15px rgba(249,115,22,0.6);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#menu-circle:hover {
+transform: scale(1.2);
+box-shadow: 0 0 25px rgba(249,115,22,0.9);
+}
+
+/* Slide-out Menu */
+#slide-menu {
+position: fixed;
+top: 0;
+left: -250px;
+width: 220px;
+height: 100%;
+background: #192a42;
+padding-top: 80px;
+transition: left 0.4s;
+z-index: 999;
+}
+
+#slide-menu ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#slide-menu li {
+margin: 20px 0;
+text-align: center;
+}
+
+#slide-menu li a {
+color: #61dafb;
+text-decoration: none;
+font-weight: 700;
+font-size: 1.1rem;
+transition: color 0.3s;
+}
+
+#slide-menu li a:hover {
+color: #f97316;
+}

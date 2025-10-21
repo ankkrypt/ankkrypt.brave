@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Ankkrypt Fire Clicker</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #about-section {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #192a42;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+      color: #cbd5e1;
+    }
+
+    #about-section h2 {
+      color: #61dafb;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    #about-section p, #about-section ul {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    #about-section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    #about-section ul li {
+      margin: 0.5rem 0;
+    }
+
+    #about-section a {
+      color: #f97316;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    #about-section a:hover {
+      color: #61dafb;
+    }
+
+    .responsive-iframe {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .responsive-iframe iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #789;
+      margin-top: 2rem;
+    }
+
+    .social-links {
+      margin: 0.5rem 0;
+    }
+
+    .social-links a img {
+      margin: 0 8px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-links a img:hover {
+      transform: scale(1.2);
+      filter: brightness(1) invert(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Menu Button -->
+  <div id="menu-circle">☰</div>
+
+  <!-- Slide-out Menu -->
+  <nav id="slide-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    <li><a href="send-crypto.html">Send Crypto Tip</a></li>
+      <li><a href="how-to-play.html">How to Play</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about-section">
+    <h2>About Ankkrypt Fire Clicker</h2>
+    <p>Ankkrypt Fire Clicker was created to participate in the <a href="https://get.unstoppabledomains.com/brave-website-competition/" target="_blank">.Brave Website-Building Challenge</a>, an initiative by Unstoppable Domains encouraging developers to create onchain websites using .brave domains.</p>
+    <p>The contest challenges participants to design interactive, engaging, and high-performance web experiences while integrating Brave-specific features like BAT tipping, Brave Wallet interactions, and seamless browser compatibility. Creativity, originality, and functionality are rewarded with prizes including BAT, .brave domain credits, and exclusive badges.</p>
+    <p>This website demonstrates these principles with:</p>
+    <ul>
+      <li>Interactive gameplay where users click the moving fire icon to score points.</li>
+      <li>Local storage integration to save and manage previous scores.</li>
+      <li>Multiple pages for “How to Play,” “About,” and “Contact.”</li>
+      <li>Optional crypto tipping to support the developer via Brave Wallet.</li>
+      <li>Responsive design and smooth animations for an engaging experience.</li>
+    </ul>
+    <p>Learn more about the contest and building interactive .brave websites:</p>
+    <div class="responsive-iframe" style="margin-top:1rem;">
+      <iframe src="https://www.youtube.com/embed/9gj-QlhEW3k?si=cSImgTfyPUvk3rl4" title="Brave Website Contest Overview" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="responsive-iframe" style="margin-top:1rem;">
+      <iframe src="https://www.youtube.com/embed/iHRQDwbTzmQ" title="Brave Website Contest Overview" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://x.com/ankkrypt" target="_blank" aria-label="X (Twitter)">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" width="24">
+      </a>
+      <a href="https://www.reddit.com/user/the_unleashed_beast/" target="_blank" aria-label="Reddit">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit" width="24">
+      </a>
+      <a href="https://github.com/ankkrypt" target="_blank" aria-label="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24">
+      </a>
+      <a href="https://community.brave.com/u/ankkrypt/preferences/account" target="_blank" aria-label="Brave Community">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg" alt="Brave" width="24">
+      </a>
+    </div>
+    <p>&copy; 2025 Ankkrypt.Brave | Built for Brave Website Contest</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
