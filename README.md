@@ -2,7 +2,7 @@
 
 Play the interactive **Ankkrypt Fire Clicker** game and tip crypto to keep playing!  
 
-- **Web2 (Standard Web):** [GitHub Pages Demo](https://ankkrypt.github.io/)  
+- **Web2 (Standard Web):** [GitHub Pages Demo](https://ankkrypt.github.io/ankkrypt.brave/)  
 - **Web3 (Brave Browser & .brave domain):** [ankkrypt.brave](https://ankkrypt.brave)  
 
 ---
@@ -35,7 +35,7 @@ Features:
 For Web3 users on **Brave Browser**, the `.brave` domain resolves directly to your wallet:  
 
 - Click **Send Crypto Tip** in the game.  
-- You will be redirected to [Send Crypto Tip Page](https://ankkrypt.github.io/send-crypto.html) with a **dynamic QR code**.  
+- You will be redirected to [Send Crypto Tip Page](https://ankkrypt.github.io/ankkrypt.brave/send-crypto.html) with a **dynamic QR code**.  
 - Or open directly in Brave Wallet: `brave://wallet/send?address=ankkrypt.brave`  
 
 For Web2 users (via GitHub Pages), you can test the game but crypto tipping only works in Brave Browser through the `.brave` domain.  
@@ -44,11 +44,11 @@ For Web2 users (via GitHub Pages), you can test the game but crypto tipping only
 
 ## Pages
 
-- **Home**: [GitHub Pages Demo](https://ankkrypt.github.io/)  
-- **How to Play**: [Instructions](https://ankkrypt.github.io/how-to-play.html)  
-- **About**: [About the project](https://ankkrypt.github.io/about.html)  
-- **Contact**: [Contact & Socials](https://ankkrypt.github.io/contact.html)  
-- **Send Crypto Tip**: [QR Code Page](https://ankkrypt.github.io/send-crypto.html)  
+- **Home**: [GitHub Pages Demo](https://ankkrypt.github.io/ankkrypt.brave/)  
+- **How to Play**: [Instructions](https://ankkrypt.github.io/ankkrypt.brave/how-to-play.html)  
+- **About**: [About the project](https://ankkrypt.github.io/ankkrypt.brave/about.html)  
+- **Contact**: [Contact & Socials](https://ankkrypt.github.io/ankkrypt.brave/contact.html)  
+- **Send Crypto Tip**: [QR Code Page](https://ankkrypt.github.io/ankkrypt.brave/send-crypto.html)  
 
 ---
 
@@ -78,6 +78,6 @@ This project is **open source** under the **MIT License**.
 
 ## Notes
 
-- **Web2 users:** Use [GitHub Pages](https://ankkrypt.github.io/) for playing the game.  
+- **Web2 users:** Use [GitHub Pages](https://ankkrypt.github.io/ankkrypt.brave/) for playing the game.  
 - **Web3 users:** Use **Brave Browser** with the `.brave` domain (`ankkrypt.brave`) for crypto tipping and full Web3 experience.  
 - The GitHub Pages demo is fully functional, but crypto payments require Brave and your `.brave` domain.
