@@ -13,6 +13,9 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   header {
@@ -22,185 +25,216 @@
 
   header h1 {
     color: #61dafb;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   #qr-container {
     max-width: 400px;
+    width: 90%;
     margin: 2rem auto;
     background: #192a42;
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-  }
-
-  #qr-container p {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #cbd5e1;
+    gap: 1.5rem;
   }
 
   #qr-container a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background: #61dafb;
-    color: #0f1927;
-    font-weight: 700;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-
-  #qr-container a:hover {
-    background: #21a1f1;
-  }
-
-  /* Floating Menu Button */
-  #menu-circle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-    background: #61dafb;
-    color: #0f1927;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(97,218,251,0.5);
-  }
-
-  /* Slide-out Menu */
-  #slide-menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #192a42;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
-    transition: left 0.3s ease;
-    z-index: 999;
-    padding-top: 3rem;
-  }
-
-  #slide-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  #slide-menu ul li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-
-  #slide-menu ul li a {
-    color: #f97316;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  #slide-menu ul li a:hover {
-    color: #61dafb;
-  }
-
-#qr-container {
-  max-width: 400px;
-  margin: 2rem auto;
-  background: #192a42;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
   display: flex;
   flex-direction: column;
-  align-items: center;      /* centers QR and text horizontally */
-  text-align: center;        /* centers text inside paragraphs */
-  gap: 1rem;                /* spacing between QR and text/buttons */
+  align-items: center;
+  text-align: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  #qr-container a:hover p {
+    color: #f97316;
+  }
+
+  #qr-container p span {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+  }
+
+  #paypal-qr canvas {
+  display: block;
+  margin: 0 auto;
 }
 
 
+
+  .wallet-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .wallet-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #243b55;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .wallet-item span {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .wallet-item span b {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #f0f0f0;
+    text-align: right;
+  }
+
+  .wallet-item span small {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    text-align: right;
+    word-break: break-all;
+  }
+
+  .wallet-item button {
+    background: #61dafb;
+    color: #0f1927;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    order: -1; /* copy button on left */
+  }
+
+  .wallet-item button:hover {
+    background: #21a1f1;
+  }
+
+  .wallet-item button img {
+    width: 20px;
+    height: 20px;
+  }
+
   footer {
-    margin-top: 3rem;
+    margin-top: auto;
     text-align: center;
     font-size: 0.9rem;
     color: #789;
-    padding-bottom: 1rem;
+    padding: 1rem;
   }
 
-  .social-links {
-    margin: 0.5rem 0;
+  @media(max-width:500px){
+    .wallet-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .wallet-item span {
+      text-align: left;
+    }
   }
 
-  .social-links a img {
-    margin: 0 8px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
 
-  .social-links a img:hover {
-    transform: scale(1.2);
-    filter: brightness(1) invert(0);
-  }
 </style>
 </head>
 <body>
 
-<!-- Floating Menu Button -->
-<div id="menu-circle">☰</div>
+  <!-- Floating Menu Button -->
+  <div id="menu-circle">☰</div>
 
-<!-- Slide-out Menu -->
-<nav id="slide-menu">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="send-crypto.html">Send Crypto Tip</a></li>
-    <li><a href="how-to-play.html">How to Play</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <!-- Slide-out Menu -->
+  <nav id="slide-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="send-crypto.html">Send Crypto Tip</a></li>
+      <li><a href="how-to-play.html">How to Play</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<header>
-  <h1>Send a Crypto Tip</h1>
-  <p>Scan the QR code or open in Brave Wallet to support the game!</p>
-</header>
+  <header>
+    <h1>Support Me with a Tip</h1>
+    <p>Scan the QR code or use any wallet below. All addresses are linked to <b>ankkrypt.brave</b></p>
+  </header>
 
-<div id="qr-container">
-  <div id="qrcode" text-align="center"></div>
-  <p><b>ankkrypt.brave<b></p>
-  <p>Scan this QR code with Brave Browser or any crypto wallet supporting .brave domains.</p>
-  <a href="brave://wallet/send?address=ankkrypt.brave" target="_blank" rel="noopener noreferrer">Open in Brave Wallet</a>
-</div>
+  <div id="qr-container">
+    <a href="https://www.paypal.me/ankitdhotre21">
+      <div id="paypal-qr"></div>
+      <p>Click QR to Pay with PayPal<span>ankitdhotre21@gmail.com / @ankitdhotre21</span></p>
+    </a>
 
-<footer>
-  <div class="social-links">
-    <a href="https://x.com/ankkrypt" target="_blank" aria-label="X (Twitter)">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" width="24">
-    </a>
-    <a href="https://www.reddit.com/user/the_unleashed_beast/" target="_blank" aria-label="Reddit">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit" width="24">
-    </a>
-    <a href="https://github.com/ankkrypt" target="_blank" aria-label="GitHub">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24">
-    </a>
-    <a href="https://community.brave.com/u/ankkrypt/preferences/account" target="_blank" aria-label="Brave Community">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg" alt="Brave" width="24">
-    </a>
+    <div class="wallet-list">
+      <div class="wallet-item">
+        <button onclick="copyToClipboard('0x22f45CE9E1daeF26bD4A5acE5eCdD12A5c0e33d1')">
+          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
+        </button>
+        <span>
+          <b>ETH / EVM:</b>
+          <small>0x22f45CE9E1daeF26bD4A5acE5eCdD12A5c0e33d1</small>
+        </span>
+      </div>
+      <div class="wallet-item">
+        <button onclick="copyToClipboard('2cbEvGJ3cB8u6w3LVy9wJeopWBfuSHXkG5JLjDoMTdLK')">
+          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
+        </button>
+        <span>
+          <b>SOL / SVM:</b>
+          <small>2cbEvGJ3cB8u6w3LVy9wJeopWBfuSHXkG5JLjDoMTdLK</small>
+        </span>
+      </div>
+      <div class="wallet-item">
+        <button onclick="copyToClipboard('bc1q8qcj6av5t6tusw5j6gyz23qqpuk5ecsdpc7zaf')">
+          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
+        </button>
+        <span>
+          <b>BTC:</b>
+          <small>bc1q8qcj6av5t6tusw5j6gyz23qqpuk5ecsdpc7zaf</small>
+        </span>
+      </div>
+      <div class="wallet-item">
+        <button onclick="copyToClipboard('addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r')">
+          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
+        </button>
+        <span>
+          <b>Cardano:</b>
+          <small>addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r</small>
+        </span>
+      </div>
+    </div>
   </div>
-  <p>&copy; 2025 Ankkrypt.Brave | Built for Brave Website Contest</p>
-</footer>
+
+  <footer>
+    &copy; 2025 Ankkrypt.Fire Clicker
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+<script src="script.js"></script>
 <script>
-  // Generate QR code dynamically
-  new QRCode(document.getElementById("qrcode"), {
-    text: "ankkrypt.brave",
+  // PayPal QR
+  new QRCode(document.getElementById("paypal-qr"), {
+    text: "https://www.paypal.me/ankitdhotre21",
     width: 200,
     height: 200,
     colorDark : "#f97316",
@@ -208,31 +242,11 @@
     correctLevel : QRCode.CorrectLevel.H
   });
 
-  // Floating menu functionality
-  const menuCircle = document.getElementById('menu-circle');
-  const slideMenu = document.getElementById('slide-menu');
-
-  menuCircle.addEventListener('click', () => {
-    slideMenu.style.left = slideMenu.style.left === '0px' ? '-250px' : '0px';
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!slideMenu.contains(e.target) && e.target !== menuCircle) {
-      slideMenu.style.left = '-250px';
-    }
-  });
-
-  slideMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      slideMenu.style.left = '-250px';
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Copied to clipboard: ' + text);
     });
-  });
-</script>
-<script>
-  // Redirect to Brave Wallet automatically
-  window.addEventListener('DOMContentLoaded', () => {
-    window.location.href = "brave://wallet/send?address=ankkrypt.brave";
-  });
+  }
 </script>
 
 </body>
