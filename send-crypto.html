@@ -1,163 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Send Crypto Tip | Ankkrypt Fire Clicker</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-  body {
-    background: linear-gradient(135deg, #141e30, #243b55);
-    color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header {
-    text-align: center;
-    padding: 2rem 1rem 1rem 1rem;
-  }
-
-  header h1 {
-    color: #61dafb;
-    margin-bottom: 0.5rem;
-  }
-
-  #qr-container {
-    max-width: 400px;
-    width: 90%;
-    margin: 2rem auto;
-    background: #192a42;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
-
-  #qr-container a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-
-  #qr-container a:hover p {
-    color: #f97316;
-  }
-
-  #qr-container p span {
-    display: block;
-    margin-top: 0.3rem;
-    font-size: 0.85rem;
-    color: #cbd5e1;
-  }
-
-  #paypal-qr canvas {
-  display: block;
-  margin: 0 auto;
-}
-
-
-
-  .wallet-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .wallet-item {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background: #243b55;
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .wallet-item span {
-    flex: 1;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .wallet-item span b {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #f0f0f0;
-    text-align: right;
-  }
-
-  .wallet-item span small {
-    font-weight: 400;
-    font-size: 0.85rem;
-    color: #cbd5e1;
-    text-align: right;
-    word-break: break-all;
-  }
-
-  .wallet-item button {
-    background: #61dafb;
-    color: #0f1927;
-    border: none;
-    padding: 0.4rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-    order: -1; /* copy button on left */
-  }
-
-  .wallet-item button:hover {
-    background: #21a1f1;
-  }
-
-  .wallet-item button img {
-    width: 20px;
-    height: 20px;
-  }
-
-  footer {
-    margin-top: auto;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #789;
-    padding: 1rem;
-  }
-
-  @media(max-width:500px){
-    .wallet-item {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Crypto Tip | Ankkrypt Fire Clicker</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      color: #61dafb;
+      margin-bottom: 0.5rem;
+    }
+
+    #qr-container {
+      max-width: 400px;
+      width: 90%;
+      margin: 2rem auto;
+      background: #192a42;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    #qr-container a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    #qr-container a:hover p {
+      color: #f97316;
+    }
+
+    #qr-container p span {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    #paypal-qr canvas {
+      display: block;
+      margin: 0 auto;
+    }
+
+
+
+    .wallet-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .wallet-item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #243b55;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
       gap: 0.5rem;
+      flex-wrap: wrap;
     }
+
     .wallet-item span {
-      text-align: left;
+      flex: 1;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
     }
-  }
 
+    .wallet-item span b {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f0f0f0;
+      text-align: right;
+    }
 
-</style>
+    .wallet-item span small {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      text-align: right;
+      word-break: break-all;
+    }
+
+    .wallet-item button {
+      background: #61dafb;
+      color: #0f1927;
+      border: none;
+      padding: 0.4rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+      order: -1;
+      /* copy button on left */
+    }
+
+    .wallet-item button:hover {
+      background: #21a1f1;
+    }
+
+    .wallet-item button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #789;
+      padding: 1rem;
+    }
+
+    @media(max-width:500px) {
+      .wallet-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .wallet-item span {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Floating Menu Button -->
@@ -214,7 +216,8 @@
         </span>
       </div>
       <div class="wallet-item">
-        <button onclick="copyToClipboard('addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r')">
+        <button
+          onclick="copyToClipboard('addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r')">
           <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
         </button>
         <span>
@@ -226,28 +229,43 @@
   </div>
 
   <footer>
-    &copy; 2025 Ankkrypt.Fire Clicker
+    <div class="social-links">
+      <a href="https://x.com/ankkrypt" target="_blank" aria-label="X (Twitter)">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" width="24">
+      </a>
+      <a href="https://www.reddit.com/user/the_unleashed_beast/" target="_blank" aria-label="Reddit">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit" width="24">
+      </a>
+      <a href="https://github.com/ankkrypt" target="_blank" aria-label="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24">
+      </a>
+      <a href="https://community.brave.com/u/ankkrypt/preferences/account" target="_blank" aria-label="Brave Community">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg" alt="Brave" width="24">
+      </a>
+    </div>
+    <p>&copy; 2025 Ankkrypt.Brave | Built for Brave Website Contest</p>
   </footer>
 
-<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-<script src="script.js"></script>
-<script>
-  // PayPal QR
-  new QRCode(document.getElementById("paypal-qr"), {
-    text: "https://www.paypal.me/ankitdhotre21",
-    width: 200,
-    height: 200,
-    colorDark : "#f97316",
-    colorLight : "#192a42",
-    correctLevel : QRCode.CorrectLevel.H
-  });
-
-  function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('Copied to clipboard: ' + text);
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // PayPal QR
+    new QRCode(document.getElementById("paypal-qr"), {
+      text: "https://www.paypal.me/ankitdhotre21",
+      width: 200,
+      height: 200,
+      colorDark: "#f97316",
+      colorLight: "#192a42",
+      correctLevel: QRCode.CorrectLevel.H
     });
-  }
-</script>
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard: ' + text);
+      });
+    }
+  </script>
 
 </body>
+
 </html>
