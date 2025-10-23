@@ -16,6 +16,8 @@ Features:
 - Local storage integration to save scores on desktop and mobile  
 - Multiple pages: **Home**, **How to Play**, **About**, **Contact**  
 - Optional crypto tipping via Brave Wallet on your `.brave` domain  
+- Direct transaction buttons for **Ethereum (ETH)** and **Solana (SOL)** to tip instantly  
+- Favicon icon added for the site  
 - Fully responsive design for desktop and mobile  
 
 ---
@@ -26,7 +28,7 @@ Features:
 2. Each click increases your score.  
 3. The game lasts **30 seconds** per session.  
 4. Scores are saved in your browser's **local storage**.  
-5. Optional: Send a crypto tip to continue playing via Brave Wallet.  
+5. Optional: Send a crypto tip to continue playing via Brave Wallet or use direct transaction buttons for ETH and SOL.  
 
 ---
 
@@ -37,6 +39,7 @@ For Web3 users on **Brave Browser**, the `.brave` domain resolves directly to yo
 - Click **Send Crypto Tip** in the game.  
 - You will be redirected to [Send Crypto Tip Page](https://ankkrypt.github.io/ankkrypt.brave/send-crypto.html) with a **dynamic QR code**.  
 - Or open directly in Brave Wallet: `brave://wallet/send?address=ankkrypt.brave`  
+- **New:** Use direct transaction buttons to send ETH or SOL tips instantly without scanning QR codes.  
 
 For Web2 users (via GitHub Pages), you can test the game but crypto tipping only works in Brave Browser through the `.brave` domain.  
 
@@ -57,7 +60,9 @@ For Web2 users (via GitHub Pages), you can test the game but crypto tipping only
 - **HTML / CSS / JavaScript**  
 - LocalStorage for score tracking  
 - QRCode.js for generating QR codes dynamically  
+- Direct transaction button integration for ETH and SOL  
 - Responsive design for mobile and desktop  
+- Favicon icon for branding  
 
 ---
 
@@ -79,5 +84,5 @@ This project is **open source** under the **MIT License**.
 ## Notes
 
 - **Web2 users:** Use [GitHub Pages](https://ankkrypt.github.io/ankkrypt.brave/) for playing the game.  
-- **Web3 users:** Use **Brave Browser** with the `.brave` domain (`ankkrypt.brave`) for crypto tipping and full Web3 experience.  
-- The GitHub Pages demo is fully functional, but crypto payments require Brave and your `.brave` domain.
+- **Web3 users:** Use **Brave Browser** with the `.brave` domain (`ankkrypt.brave`) for crypto tipping, direct ETH & SOL transactions, and full Web3 experience.  
+- The GitHub Pages demo is fully functional, but crypto payments require Brave and your `.brave` domain.  
