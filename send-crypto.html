@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Send Crypto Tip | Ankkrypt Fire Clicker</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       background: linear-gradient(135deg, #141e30, #243b55);
       color: #f0f0f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       min-height: 100vh;
@@ -70,8 +74,6 @@
       margin: 0 auto;
     }
 
-
-
     .wallet-list {
       width: 100%;
       display: flex;
@@ -93,7 +95,7 @@
 
     .wallet-item span {
       flex: 1;
-      text-align: right;
+      text-align: left;
       display: flex;
       flex-direction: column;
       gap: 0.2rem;
@@ -138,6 +140,11 @@
       height: 20px;
     }
 
+    .wallet-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     footer {
       margin-top: auto;
       text-align: center;
@@ -146,7 +153,7 @@
       padding: 1rem;
     }
 
-    @media(max-width:500px) {
+    @media (max-width: 500px) {
       .wallet-item {
         flex-direction: column;
         align-items: flex-start;
@@ -175,6 +182,7 @@
       word-wrap: break-word;
       white-space: normal;
       overflow-wrap: break-word;
+      z-index: 9999;
     }
 
     @keyframes toast-animation {
@@ -192,7 +200,6 @@
 </head>
 
 <body>
-
   <!-- Floating Menu Button -->
   <div id="menu-circle">☰</div>
 
@@ -220,37 +227,55 @@
 
     <div class="wallet-list">
       <div class="wallet-item">
-        <button onclick="copyToClipboard('0x22f45CE9E1daeF26bD4A5acE5eCdD12A5c0e33d1')">
-          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
-        </button>
+        <div class="wallet-buttons">
+          <button onclick="sendEthTip()" title="Send ETH Tip">
+            <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/credit-card.svg" alt="Send ETH"
+              style="width:20px;height:20px;" />
+          </button>
+          <button onclick="copyToClipboard('0x22f45CE9E1daeF26bD4A5acE5eCdD12A5c0e33d1')">
+            <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy" />
+          </button>
+        </div>
         <span>
           <b>ETH / EVM:</b>
           <small>0x22f45CE9E1daeF26bD4A5acE5eCdD12A5c0e33d1</small>
         </span>
       </div>
       <div class="wallet-item">
-        <button onclick="copyToClipboard('2cbEvGJ3cB8u6w3LVy9wJeopWBfuSHXkG5JLjDoMTdLK')">
-          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
-        </button>
+        <div class="wallet-buttons">
+          <button onclick="sendSolTip()" title="Send SOL Tip">
+            <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/credit-card.svg" alt="Send SOL"
+              style="width:20px;height:20px;" />
+          </button>
+          <button onclick="copyToClipboard('2cbEvGJ3cB8u6w3LVy9wJeopWBfuSHXkG5JLjDoMTdLK')">
+            <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy" />
+          </button>
+        </div>
         <span>
           <b>SOL / SVM:</b>
           <small>2cbEvGJ3cB8u6w3LVy9wJeopWBfuSHXkG5JLjDoMTdLK</small>
         </span>
       </div>
       <div class="wallet-item">
-        <button onclick="copyToClipboard('bc1q8qcj6av5t6tusw5j6gyz23qqpuk5ecsdpc7zaf')">
-          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
-        </button>
+
+        <div class="wallet-buttons">
+          <button onclick="copyToClipboard('bc1q8qcj6av5t6tusw5j6gyz23qqpuk5ecsdpc7zaf')">
+            <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy" />
+          </button>
+        </div>
         <span>
           <b>BTC:</b>
           <small>bc1q8qcj6av5t6tusw5j6gyz23qqpuk5ecsdpc7zaf</small>
         </span>
       </div>
       <div class="wallet-item">
-        <button
-          onclick="copyToClipboard('addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r')">
-          <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy">
-        </button>
+
+        <div class="wallet-buttons">
+          <button
+            onclick="copyToClipboard('addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r')">
+            <img src="https://cdn.jsdelivr.net/gh/feathericons/feather/icons/clipboard.svg" alt="Copy" />
+          </button>
+        </div>
         <span>
           <b>Cardano:</b>
           <small>addr1q88gvak32ffzn2ph3p048txrruwn5z0hc5c754sgukay3l7acfvld84xn8jn9yjqavx9anhdcy4mmjjxpqh3v3h8wt5q5dd09r</small>
@@ -262,16 +287,16 @@
   <footer>
     <div class="social-links">
       <a href="https://x.com/ankkrypt" target="_blank" aria-label="X (Twitter)">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" width="24">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" width="24" />
       </a>
       <a href="https://www.reddit.com/user/the_unleashed_beast/" target="_blank" aria-label="Reddit">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit" width="24">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit" width="24" />
       </a>
       <a href="https://github.com/ankkrypt" target="_blank" aria-label="GitHub">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" />
       </a>
       <a href="https://community.brave.com/u/ankkrypt/preferences/account" target="_blank" aria-label="Brave Community">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg" alt="Brave" width="24">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg" alt="Brave" width="24" />
       </a>
     </div>
     <p>&copy; 2025 Ankkrypt.Brave | Built for Brave Website Contest</p>
@@ -279,6 +304,8 @@
 
   <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
   <script>
     // PayPal QR
     new QRCode(document.getElementById("paypal-qr"), {
@@ -287,24 +314,27 @@
       height: 200,
       colorDark: "#f97316",
       colorLight: "#192a42",
-      correctLevel: QRCode.CorrectLevel.H
+      correctLevel: QRCode.CorrectLevel.H,
     });
 
     function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        // Create a toast notification
-        showToast('Copied to clipboard: ' + text);
-      }).catch(err => {
-        // Handle error
-        console.error('Failed to copy: ', err);
-        showToast('Failed to copy. Please try again.');
-      });
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          // Create a toast notification
+          showToast("Copied to clipboard: " + text);
+        })
+        .catch((err) => {
+          // Handle error
+          console.error("Failed to copy: ", err);
+          showToast("Failed to copy. Please try again.");
+        });
     }
 
     function showToast(message) {
       // Create a toast element
-      const toast = document.createElement('div');
-      toast.className = 'toast'; // Add a class for styling
+      const toast = document.createElement("div");
+      toast.className = "toast"; // Add a class for styling
       toast.innerText = message;
 
       // Append the toast to the body
@@ -316,8 +346,97 @@
       }, 3000);
     }
 
-  </script>
+    const ethAddress = "0x22f45CE9E1daeF26bD4A5acE5eCdD12A5c0e33d1";
+    const solAddress = "2cbEvGJ3cB8u6w3LVy9wJeopWBfuSHXkG5JLjDoMTdLK";
 
+    // Send ETH tip via window.ethereum (Brave Wallet or any injected Ethereum provider)
+async function sendEthTip() {
+  if (!window.ethereum) {
+    showToast("Ethereum wallet not detected");
+    return;
+  }
+  try {
+    // Request account access if needed
+    await window.ethereum.request({ method: "eth_requestAccounts" });
+
+    const accounts = await window.ethereum.request({ method: "eth_accounts" });
+    if (!accounts.length) {
+      showToast("No Ethereum account found");
+      return;
+    }
+
+    const transactionParameters = {
+      to: ethAddress,
+      from: accounts[0],
+      value: "0xde0b6b3a7640000", // 1 ETH in wei hex string
+    };
+
+    const txHash = await window.ethereum.request({
+      method: "eth_sendTransaction",
+      params: [transactionParameters],
+    });
+
+    showToast("ETH tip sent! Tx Hash: " + txHash);
+    console.log("ETH tip tx hash:", txHash);
+  } catch (err) {
+    console.error("Error sending ETH tip:", err);
+    showToast("Failed to send ETH tip: " + (err.message || err));
+  }
+}
+
+    // Send SOL tip via window.braveSolana (or window.solana alias)
+async function sendSolTip() {
+  const solProvider = window.solana || window.braveSolana;
+
+  if (!solProvider || !(solProvider.isBraveWallet || solProvider.isPhantom)) {
+    showToast("Solana wallet not detected");
+    return;
+  }
+
+  try {
+    // Connect wallet if not connected
+    if (!solProvider.isConnected) {
+      await solProvider.connect();
+    }
+
+    if (!solProvider.publicKey) {
+      showToast("Failed to get Solana public key");
+      return;
+    }
+
+    const fromPubkey = solProvider.publicKey;
+    const toPubkey = new solanaWeb3.PublicKey(solAddress);
+
+    const connection = new solanaWeb3.Connection("https://api.mainnet-beta.solana.com");
+    const { blockhash } = await connection.getLatestBlockhash();
+
+    const lamportsToSend = solanaWeb3.LAMPORTS_PER_SOL / 100; // 0.01 SOL
+
+    const transaction = new solanaWeb3.Transaction({
+      recentBlockhash: blockhash,
+      feePayer: fromPubkey,
+    }).add(
+      solanaWeb3.SystemProgram.transfer({
+        fromPubkey,
+        toPubkey,
+        lamports: lamportsToSend,
+      })
+    );
+
+    const signed = await solProvider.signAndSendTransaction(transaction);
+
+    showToast("SOL tip sent! Signature: " + signed.signature);
+    console.log("Solana tip signature:", signed.signature);
+
+    // Optional: wait for confirmation for better UX
+    await connection.confirmTransaction(signed.signature, "confirmed");
+  } catch (err) {
+    console.error("Error sending SOL tip:", err);
+    showToast("Failed to send SOL tip: " + (err.message || err));
+  }
+}
+
+  </script>
 </body>
 
 </html>
